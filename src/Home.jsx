@@ -1,10 +1,11 @@
 import "./styles.css";
 import { useState, useEffect } from "react";
 import { Profile } from "./components/Profile";
+import { Proyectos } from "./components/Proyectos";
 
 function Home() {
   const [profile, setProfile] = useState([]);
-  const [portafolio, setPortafolio] = useState([]);
+  const [proyectos, setProyectos] = useState([]);
   const url = "https://my-json-server.typicode.com/alenddro/jsondb/db/";
   //https://my-json-server.typicode.com/alenddro/jsondb json data base
 
@@ -13,7 +14,8 @@ function Home() {
       .then((response) => response.json())
       .then((data) => {
         setProfile(data.profile);
-        console.log(profile);
+        setProyectos(data.proyectos);
+        console.log(proyectos);
       });
   };
 
@@ -24,6 +26,7 @@ function Home() {
   return (
     <>
       <Profile profile={profile} />
+      <Proyectos proyectos={proyectos} />
     </>
   );
 }
