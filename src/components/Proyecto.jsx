@@ -3,11 +3,20 @@ export const Proyecto = ({ proyecto }) => {
   return (
     <>
       <hr />
-      <img src={proyecto.img} alt={proyecto.img} width="300" />
-      <h6>{proyecto.id}</h6>
-      <p>{proyecto.title}</p>
-      <div>{proyecto.descripcion}</div>
-      <i>{proyecto.lenguajes}</i>
+      <div className="card bg-dark">
+        <img src={proyecto.img} alt={proyecto.img} className="card-img-top" />
+        <div className="card-body">
+          <p className="text-light">Realizado en el año: {proyecto.anio}</p>
+          <h5 className="card-title">{proyecto.title}</h5>
+          <p className="card-text">{proyecto.descripcion}</p>
+          <p>
+            <b> Lenguajes usados: {proyecto.lenguajes} </b>
+          </p>
+          <a href="#" className="btn btn-primary">
+            ver imagen
+          </a>
+        </div>
+      </div>
     </>
   );
 };

@@ -5,6 +5,7 @@ import { Profile } from "./components/Profile";
 function App() {
   const [profile, setProfile] = useState([]);
   const [portafolio, setPortafolio] = useState([]);
+
   const url = "https://my-json-server.typicode.com/alenddro/jsondb/db/";
   // //https://my-json-server.typicode.com/alenddro/jsondb json data base
 
